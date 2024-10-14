@@ -9,17 +9,16 @@ class HighLightedInfoProjects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: defaultPadding),
+        SizedBox(height: defaultPadding),
         Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            padding: EdgeInsets.symmetric(horizontal: defaultPadding),
             child:Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                HighLightedTextWithCounter(counter:AnimatedCounterText(counter: 10,text: "+"),title: "App live on play store",),
-                // HighLightedTextWithCounter(counter:AnimatedCounterText(counter: 2,text: ""),title: "App live on app store",),
+              children: [
+                HighLightedTextWithCounter(counter:AnimatedCounterText(counter: 10,text: "+"),title: "App live on play store & app store",),
                 HighLightedTextWithCounter(counter:AnimatedCounterText(counter: 50,text: "+"),title: "Github projects",),
               ],
             )

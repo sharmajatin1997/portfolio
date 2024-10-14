@@ -40,7 +40,7 @@ class SideMenu extends StatelessWidget {
                 ),
                 const Row(
                   children: [
-                    Expanded(child: AnimatedProgressIndicator(percentage: 0.9,text: "Flutter",)),
+                    Expanded(child: AnimatedProgressIndicator(percentage: 0.95,text: "Flutter",)),
                     SizedBox(width: defaultPadding),
                     Expanded(child: AnimatedProgressIndicator(percentage: 0.85,text: "Android",)),
                     SizedBox(width: defaultPadding),
@@ -50,11 +50,11 @@ class SideMenu extends StatelessWidget {
                 const SizedBox(height: defaultPadding),
                 const Row(
                   children: [
-                    Expanded(child: AnimatedProgressIndicator(percentage: 0.75,text: "GetX",)),
+                    Expanded(child: AnimatedProgressIndicator(percentage: 0.95,text: "GetX",)),
                     SizedBox(width: defaultPadding),
-                    Expanded(child: AnimatedProgressIndicator(percentage: 0.80,text: "Socket",)),
+                    Expanded(child: AnimatedProgressIndicator(percentage: 0.90,text: "Socket",)),
                     SizedBox(width: defaultPadding),
-                    Expanded(child: AnimatedProgressIndicator(percentage: 0.80,text: "Pub dev",)),
+                    Expanded(child: AnimatedProgressIndicator(percentage: 0.90,text: "Pub dev",)),
 
                   ],
                 ),
@@ -72,7 +72,7 @@ class SideMenu extends StatelessWidget {
                 ),
                 const Column(
                   children: [
-                    CodingProgress(text: "Dart",percentage: 0.8),
+                    CodingProgress(text: "Dart",percentage: 0.95),
                     SizedBox(width: defaultPadding),
                     CodingProgress(text: "Kotlin",percentage: 0.85),
                     SizedBox(width: defaultPadding),
@@ -90,11 +90,13 @@ class SideMenu extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("Knowledges",style: Theme.of(context).textTheme.titleMedium,),
+                          Text("Knowledge",style: Theme.of(context).textTheme.titleMedium,),
                         ],
                       ),
                     ),
                     const KnowledgeWidget(text: 'Flutter, dart'),
+                    const SizedBox(height: defaultPadding/2,),
+                    const KnowledgeWidget(text: 'Pub Dev Package'),
                     const SizedBox(height: defaultPadding/2,),
                     const KnowledgeWidget(text: 'Google APIS-MAPS'),
                     const SizedBox(height: defaultPadding/2,),
