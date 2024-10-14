@@ -16,7 +16,7 @@ class CodingProgress extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(text,style:const TextStyle(color: Colors.white,fontSize: 12),),
-                  Text("${(value*100).toInt()}%",style:Theme.of(context).textTheme.subtitle2 ,),
+                  Text("${(value*100).toInt()}%",style:Theme.of(context).textTheme.titleSmall ,),
                 ]),
             const SizedBox(height: defaultPadding/4),
             LinearProgressIndicator(

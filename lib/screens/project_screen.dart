@@ -5,20 +5,21 @@ import 'package:portfolio/constants.dart';
 import 'main_screen.dart';
 
 class ProjectDetailScreen extends StatelessWidget {
-  const ProjectDetailScreen({Key? key,this.title,this.animationMessage,this.projectType,this.projectLink,this.projectContent}) : super(key: key);
+  const ProjectDetailScreen({Key? key,this.title,this.animationMessage,this.projectType,this.projectLink,this.projectContent,this.iosLink}) : super(key: key);
 
   final String? title;
   final String? animationMessage;
   final String? projectType;
   final String? projectLink;
   final String? projectContent;
+  final String? iosLink;
 
 
   @override
   Widget build(BuildContext context) {
     return  MainScreen(
         children: [
-          ProjectBanner(title: title,animationMessage: animationMessage,projectType: projectType,projectLink: projectLink),
+          ProjectBanner(title: title,animationMessage: animationMessage,projectType: projectType,projectLink: projectLink,iosLink:iosLink),
           Container(
             margin: const EdgeInsets.all(defaultPadding),
             padding: const EdgeInsets.all(defaultPadding/2),

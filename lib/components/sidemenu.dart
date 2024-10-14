@@ -34,12 +34,12 @@ class SideMenu extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text("Skills",style: Theme.of(context).textTheme.subtitle1,),
+                      Text("Skills",style: Theme.of(context).textTheme.titleMedium,),
                     ],
                   ),
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Expanded(child: AnimatedProgressIndicator(percentage: 0.9,text: "Flutter",)),
                     SizedBox(width: defaultPadding),
                     Expanded(child: AnimatedProgressIndicator(percentage: 0.85,text: "Android",)),
@@ -48,8 +48,8 @@ class SideMenu extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: defaultPadding),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Expanded(child: AnimatedProgressIndicator(percentage: 0.75,text: "GetX",)),
                     SizedBox(width: defaultPadding),
                     Expanded(child: AnimatedProgressIndicator(percentage: 0.80,text: "Socket",)),
@@ -66,12 +66,12 @@ class SideMenu extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text("Coding",style: Theme.of(context).textTheme.subtitle1,),
+                      Text("Coding",style: Theme.of(context).textTheme.titleMedium,),
                     ],
                   ),
                 ),
-                Column(
-                  children: const [
+                const Column(
+                  children: [
                     CodingProgress(text: "Dart",percentage: 0.8),
                     SizedBox(width: defaultPadding),
                     CodingProgress(text: "Kotlin",percentage: 0.85),
@@ -90,7 +90,7 @@ class SideMenu extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("Knowledges",style: Theme.of(context).textTheme.subtitle1,),
+                          Text("Knowledges",style: Theme.of(context).textTheme.titleMedium,),
                         ],
                       ),
                     ),
@@ -123,7 +123,7 @@ class SideMenu extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("DOWNLOAD CV",style: Theme.of(context).textTheme.subtitle1,),
+                    Text("DOWNLOAD CV",style: Theme.of(context).textTheme.titleMedium,),
                     const SizedBox(width:defaultPadding/2),
                     SvgPicture.asset('assets/icons/download.svg',width: 14,height: 14,color: Colors.white,)
                   ],
@@ -197,7 +197,7 @@ class KnowledgeWidget extends StatelessWidget {
       children: [
         SvgPicture.asset("assets/icons/tick.svg",height: 14,width: 14),
         const SizedBox(width: defaultPadding/4),
-        Flexible(child: Text(text,style: Theme.of(context).textTheme.subtitle2,overflow: TextOverflow.ellipsis,)),
+        Flexible(child: Text(text,style: Theme.of(context).textTheme.titleSmall,overflow: TextOverflow.ellipsis,)),
       ],
     );
   }

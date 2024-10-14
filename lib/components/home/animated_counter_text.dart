@@ -16,7 +16,7 @@ class AnimatedCounterText extends StatelessWidget {
         builder: (context, value, child) =>
             Text("$value$text",style:
             Responsive.isDesktop(context)?
-            Theme.of(context).textTheme.headline6!.copyWith(
+            Theme.of(context).textTheme.headlineSmall!.copyWith(
                 color: primaryColor,
                 fontWeight:FontWeight.w500
 

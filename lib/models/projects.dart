@@ -1,12 +1,22 @@
 import 'package:portfolio/content/project_content.dart';
 
 class Projects{
-  final String? title,description,animationMessage,projectType,projectLink,longContent;
+  final String? title,description,animationMessage,projectType,projectLink,longContent,iosLink;
 
-  Projects({this.title,this.description,this.animationMessage,this.projectType,this.projectLink,this.longContent});
+  Projects({this.title,this.description,this.animationMessage,this.projectType,this.projectLink,this.longContent,this.iosLink});
 }
 
 List<Projects> demoProjects=[
+
+  Projects(
+      title: "DIDIT GYM App",
+      animationMessage: "Work out App",
+      projectType: "Flutter",
+      projectLink: "https://play.google.com/store/apps/details?id=com.app.didit&pli=1",
+      iosLink:'https://apps.apple.com/in/app/didit-app/id6478201495' ,
+      longContent: ProjectContent.didit,
+      description: "From deciding to complete your first Half Marathon, to completing a Full IronMan, we will be part of your journey. While achieving your goals, our main mission is to create personalised memorabilia on all your fitness journeys. For you and your family and friends to cherish your accomplishments , hard work and dedication. We will help you set goals, track workouts, monitor progress, and most importantly capture your memories along the way."
+  ),
 
   Projects(
       title: "Quick & Random Chat",
@@ -22,6 +32,7 @@ List<Projects> demoProjects=[
       projectType: "Flutter",
       longContent: ProjectContent.vigourMedia,
       projectLink: "https://play.google.com/store/apps/details?id=com.app.vigourmedia&pli=1",
+      iosLink: 'https://apps.apple.com/in/app/vigour-media/id6446580465',
       description: "Vigour.Media is Australia’s most contemporary digital media company specialising in health & wellbeing. We believe in positively influencing health behaviours by enhancing health literacy and creating an engaging, immersive and interactive user experience. Our App provides an easy & convenient way to access a number of our digital services. These include our eMagazine, Online Bookings, Benefits Program and other health content. Premium access to the App includes Recipes, Workout Videos, Podcasts, Video Blogs, Articles and health calculators. All our solutions can be customised for your organisation / business."
   ),
   Projects(

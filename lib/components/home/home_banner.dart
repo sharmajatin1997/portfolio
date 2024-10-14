@@ -33,17 +33,17 @@ class HomeBanner extends StatelessWidget {
                     children: [
                       Text("Discover My Amazing\nData Space",
                           style: Responsive.isDesktop(context)?
-                         Theme.of(context).textTheme.headline3?.copyWith(
+                         Theme.of(context).textTheme.headlineMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.white
-                      ):Theme.of(context).textTheme.headline5?.copyWith(
+                      ):Theme.of(context).textTheme.headlineSmall?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: Colors.white
                           ) ),
                       Padding(
                         padding: const EdgeInsets.only(top: defaultPadding/2),
                         child: DefaultTextStyle(
-                          style: Theme.of(context).textTheme.subtitle1!,
+                          style: Theme.of(context).textTheme.titleMedium!,
                           child: Row(
                             children: [
                               if(!Responsive.isMobile(context))

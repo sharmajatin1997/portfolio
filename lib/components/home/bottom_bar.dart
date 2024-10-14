@@ -23,10 +23,10 @@ class BottomBar extends StatelessWidget {
                   const Spacer(),
                   Text("Contact Us",
                       style: Responsive.isDesktop(context)?
-                      Theme.of(context).textTheme.headline3?.copyWith(
+                      Theme.of(context).textTheme.headlineMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.white
-                      ):Theme.of(context).textTheme.headline5?.copyWith(
+                      ):Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.white
                       ) ),

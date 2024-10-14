@@ -14,6 +14,6 @@ class Assets {
   static const String iconsTick = 'assets/icons/tick.svg';
   static const String iconsTwitter = 'assets/icons/twitter.svg';
   static const String imagesBg = 'assets/images/bg.jpeg';
-  static const String imagesJatin = 'assets/images/jatin.jpg';
+  static const String imagesJatin = 'assets/images/jatin.JPG';
 
 }

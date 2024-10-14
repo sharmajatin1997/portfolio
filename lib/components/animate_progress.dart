@@ -22,13 +22,13 @@ class AnimatedProgressIndicator extends StatelessWidget {
                     color: primaryColor,
                     backgroundColor: darkColor,
                   ),
-                  Center(child: Text("${(value*100).toInt()}%",style: Theme.of(context).textTheme.subtitle1,))
+                  Center(child: Text("${(value*100).toInt()}%",style: Theme.of(context).textTheme.titleMedium,))
                 ],
               )
           ),
         ),
         const SizedBox(height: defaultPadding/2,),
-        Text(text,style: Theme.of(context).textTheme.subtitle2,maxLines: 1,overflow: TextOverflow.ellipsis,)
+        Text(text,style: Theme.of(context).textTheme.titleSmall,maxLines: 1,overflow: TextOverflow.ellipsis,)
       ],
     );
   }

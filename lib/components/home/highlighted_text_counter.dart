@@ -15,7 +15,7 @@ class HighLightedTextWithCounter extends StatelessWidget {
         counter,
         const SizedBox(width:defaultPadding/4,),
         Text(title??"",style:  Responsive.isMobile(context)? const TextStyle(color: bodyTextColor1,fontSize: 11) :
-        Theme.of(context).textTheme.subtitle1)
+        Theme.of(context).textTheme.titleMedium)
       ],
     );
   }

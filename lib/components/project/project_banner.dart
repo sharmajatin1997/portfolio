@@ -6,12 +6,13 @@ import 'package:portfolio/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectBanner extends StatelessWidget {
-  const ProjectBanner({Key? key,this.title,this.animationMessage,this.projectType,this.projectLink}) : super(key: key);
+  const ProjectBanner({Key? key,this.title,this.animationMessage,this.projectType,this.projectLink,this.iosLink}) : super(key: key);
 
   final String? title;
   final String? animationMessage;
   final String? projectType;
   final String? projectLink;
+  final String? iosLink;
 
   @override
   Widget build(BuildContext context) {
@@ -40,17 +41,17 @@ class ProjectBanner extends StatelessWidget {
                     const Spacer(),
                     Text(title??"",
                         style: Responsive.isDesktop(context)?
-                       Theme.of(context).textTheme.headline3?.copyWith(
+                       Theme.of(context).textTheme.headlineMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Colors.white
-                    ):Theme.of(context).textTheme.headline5?.copyWith(
+                    ):Theme.of(context).textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white
                         ) ),
                     Padding(
                       padding: const EdgeInsets.only(top: defaultPadding/2),
                       child: DefaultTextStyle(
-                        style: Theme.of(context).textTheme.subtitle1!,
+                        style: Theme.of(context).textTheme.titleMedium!,
                         child: Row(
                           children: [
                             Text.rich(TextSpan(
@@ -78,44 +79,100 @@ class ProjectBanner extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    InkWell(
-                      onTap: (){
-                        Uri url = Uri.parse(projectLink!);
-                        _launchUrl(url);
-                      },
-                      child: Container(
-                        margin: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
-                        padding: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
-                        width: Responsive.screenWidth(context)/3,
-                        decoration: BoxDecoration(
-                          color: secondaryColor,
-                          borderRadius: BorderRadius.circular(defaultPadding/2),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.white38,
-                              offset: Offset(
-                                  0,0
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: (){
+                            Uri url = Uri.parse(projectLink!);
+                            _launchUrl(url);
+                          },
+                          child: Container(
+                            margin: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
+                            padding: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
+                            width: Responsive.screenWidth(context)/3,
+                            decoration: BoxDecoration(
+                              color: secondaryColor,
+                              borderRadius: BorderRadius.circular(defaultPadding/2),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.white38,
+                                  offset: Offset(
+                                      0,0
+                                  ),
+                                  blurRadius: 10.0,
+                                  spreadRadius: 1.0,
+                                ), //BoxShadow
+                              ],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.only(right:Responsive.isMobile(context)? defaultPadding/4:defaultPadding/2),
+                                  child: SvgPicture.asset("assets/icons/google_play.svg",height:Responsive.isMobile(context)?15:30,width: Responsive.isMobile(context)?15:30),
+                                ),
+                                Text(Responsive.isDesktop(context)?"View App on Playstore":"View App",style:Responsive.isMobile(context)?
+                                const TextStyle(color: primaryColor,fontWeight: FontWeight.w500,fontSize: 10):
+                                const TextStyle(color: primaryColor,fontWeight: FontWeight.w700)
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Visibility(
+                          visible: iosLink!=null,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width:Responsive.isMobile(context)?defaultPadding/4: defaultPadding/2,
                               ),
-                              blurRadius: 10.0,
-                              spreadRadius: 1.0,
-                            ), //BoxShadow
-                          ],
+                              InkWell(
+                                onTap: (){
+                                  Uri url = Uri.parse(iosLink!);
+                                  _launchUrl(url);
+                                },
+                                child: Container(
+                                  margin: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
+                                  padding: Responsive.isMobile(context)?const EdgeInsets.all(defaultPadding/4):const EdgeInsets.all(defaultPadding/2),
+                                  width: Responsive.screenWidth(context)/3,
+                                  decoration: BoxDecoration(
+                                    color: secondaryColor,
+                                    borderRadius: BorderRadius.circular(defaultPadding/2),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.white38,
+                                        offset: Offset(
+                                            0,0
+                                        ),
+                                        blurRadius: 10.0,
+                                        spreadRadius: 1.0,
+                                      ), //BoxShadow
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(right:Responsive.isMobile(context)? defaultPadding/4:defaultPadding/2),
+                                        child: SvgPicture.asset("assets/icons/apple.svg",height:Responsive.isMobile(context)?15:30,width: Responsive.isMobile(context)?15:30),
+                                      ),
+                                      Text(Responsive.isDesktop(context)?"View App on Apple Store":"View App",style:Responsive.isMobile(context)?
+                                      const TextStyle(color: primaryColor,fontWeight: FontWeight.w500,fontSize: 10):
+                                      const TextStyle(color: primaryColor,fontWeight: FontWeight.w700)
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.only(right:Responsive.isMobile(context)? defaultPadding/4:defaultPadding/2),
-                              child: SvgPicture.asset("assets/icons/google_play.svg",height:Responsive.isMobile(context)?15:30,width: Responsive.isMobile(context)?15:30),
-                            ),
-                            Text(Responsive.isDesktop(context)?"View App on Playstore":"View App",style:Responsive.isMobile(context)?
-                            const TextStyle(color: primaryColor,fontWeight: FontWeight.w500,fontSize: 10):
-                            const TextStyle(color: primaryColor,fontWeight: FontWeight.w700)
-                            ),
-                          ],
-                        ),
-                      ),
+
+                      ],
                     ),
 
                     const Spacer(),

@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
               .apply(bodyColor: Colors.white)
               .copyWith(
-                  subtitle1: const TextStyle(color: bodyTextColor1,fontSize: 14),
-                  subtitle2:
+                  titleMedium: const TextStyle(color: bodyTextColor1,fontSize: 14),
+                  titleSmall:
                       const TextStyle(color: bodyTextColor, fontSize: 11))),
       home: const HomeScreen(),
     );

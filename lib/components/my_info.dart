@@ -40,11 +40,11 @@ class MyInfo extends StatelessWidget {
                     ),
                     const CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage('assets/images/jatin.jpg'),
+                      backgroundImage: AssetImage('assets/images/jatin.JPG'),
                     ),
                     const Spacer(),
                     Text("Jatin Sharma",
-                        style: Theme.of(context).textTheme.subtitle1),
+                        style: Theme.of(context).textTheme.titleMedium),
                     const Text("Android & Flutter Developer",
                         style: TextStyle(
                             fontWeight: FontWeight.w200,
