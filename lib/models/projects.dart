@@ -19,14 +19,6 @@ List<Projects> demoProjects=[
   ),
 
   Projects(
-      title: "Quick & Random Chat",
-      animationMessage: "Chat App with firebase",
-      projectType: "Flutter",
-      projectLink: "https://play.google.com/store/apps/details?id=com.rcw.randomChatWorld",
-      longContent: ProjectContent.quickChat,
-      description: "Quick & Random Chat App is designed for anyone who loves to meet new people and engage in exciting conversations with random strangers. Simply join the chat room, and you will be paired with another random user who is also looking for a chat. It is easy to use and accessible from anywhere in the world. All you need is an internet connection and a device to start chatting with random people. So, come join us and start having fun, spontaneous conversations with strangers today!"
-  ),
-  Projects(
       title: "Vigour.Media",
       animationMessage: "e-Newspaper & Magazine App",
       projectType: "Flutter",
@@ -35,14 +27,25 @@ List<Projects> demoProjects=[
       iosLink: 'https://apps.apple.com/in/app/vigour-media/id6446580465',
       description: "Vigour.Media is Australia’s most contemporary digital media company specialising in health & wellbeing. We believe in positively influencing health behaviours by enhancing health literacy and creating an engaging, immersive and interactive user experience. Our App provides an easy & convenient way to access a number of our digital services. These include our eMagazine, Online Bookings, Benefits Program and other health content. Premium access to the App includes Recipes, Workout Videos, Podcasts, Video Blogs, Articles and health calculators. All our solutions can be customised for your organisation / business."
   ),
+
   Projects(
-    title: "Carro Libre",
-    longContent: ProjectContent.carroLibre,
-    animationMessage: "Like OLA, UBER & BLA BLA App",
-    projectType: "Android",
-    projectLink: "https://play.google.com/store/apps/details?id=com.app.carrolibre",
-    description: "Carro Libre is just Like a OLA, UBER and BLA BLA App. The Carro Libre app offer mobility solutions by connecting customers to drivers and wide range of vehicle across Bikes, Cars and Trucks."
+      title: "Quick & Random Chat",
+      animationMessage: "Chat App with firebase",
+      projectType: "Flutter",
+      projectLink: "https://play.google.com/store/apps/details?id=com.rcw.randomChatWorld",
+      longContent: ProjectContent.quickChat,
+      description: "Quick & Random Chat App is designed for anyone who loves to meet new people and engage in exciting conversations with random strangers. Simply join the chat room, and you will be paired with another random user who is also looking for a chat. It is easy to use and accessible from anywhere in the world. All you need is an internet connection and a device to start chatting with random people. So, come join us and start having fun, spontaneous conversations with strangers today!"
   ),
+
+  Projects(
+      title: "Doormotion Service",
+      longContent: ProjectContent.doorMotion,
+      animationMessage: "Service Provider App",
+      projectType: "Flutter",
+      projectLink: "https://play.google.com/store/apps/details?id=com.door.motion.doormotion",
+      description: "Doormotion is a leading provider of loading bay equipment, industrial and bespoke specialty door systems, with a combined experience of over 50 years. We have a dedicated team of specialist engineers, technicians and operatives offers a comprehensive engineering solution, from supply and installation to servicing and repairs. We can offer tailored engineering solutions to suit each customer’s individual needs, giving our clients substantial design flexibility. All our products and services, including our call-out service, are fully compliant with the highest industry and legal standards."
+  ),
+
   Projects(
       title: "Locker Room Timer",
       longContent: ProjectContent.lockerRoom,
@@ -51,6 +54,16 @@ List<Projects> demoProjects=[
       projectLink: "https://play.google.com/store/apps/details?id=com.app.lockerroom",
       description: "Locker Room is a Gym class Timer App basically created for home workout. In Locker room User Select TIme and Sets according to body Workout. Locker Room is an Android Tv Application"
   ),
+
+  Projects(
+    title: "Carro Libre",
+    longContent: ProjectContent.carroLibre,
+    animationMessage: "Like OLA, UBER & BLA BLA App",
+    projectType: "Android",
+    projectLink: "https://play.google.com/store/apps/details?id=com.app.carrolibre",
+    description: "Carro Libre is just Like a OLA, UBER and BLA BLA App. The Carro Libre app offer mobility solutions by connecting customers to drivers and wide range of vehicle across Bikes, Cars and Trucks."
+  ),
+
   Projects(
       title: "Drip User",
       longContent: ProjectContent.dripp,
